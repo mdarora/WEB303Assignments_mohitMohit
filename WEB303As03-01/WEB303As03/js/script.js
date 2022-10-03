@@ -13,7 +13,6 @@ function getJsonData(){
 function getDataByAjax(){
     $.ajax({
         url: "team.json",
-        timeout: 5000,
         beforeSend: function(){
             $("div#team").html(`<h1>Loading...</h1>`);
         },
