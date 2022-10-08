@@ -1,13 +1,25 @@
 /*
     Assignment #4
-    {Your name here}
+    {Mohit Mohit}
 */
 
 $(function () {
-    // your code here
+    try{
+        navigator.geolocation.getCurrentPosition(ShowPosition, error);
+    } catch(err){
+        console.log("There is an error : ", err);
+    }
 
-
-
+    function ShowPosition(position){
+        $('#locationhere').html(`Lattitued ${position.coords.latitude} <br>Longitude: ${position.coords.longitude}`);
+    }
+    function error(error){
+        if(error.code == 1){
+            $('#locationhere').html("Must allow location to use the application!");
+        } else {
+            $('#locationhere').html("Something is wrong! ", error.message);
+        }
+    }
 
 
     // DO NOT EDIT ANY CODE IN THIS FUNCTION DEFINTION
