@@ -11,12 +11,19 @@ $(function () {
     }
 
     function ShowPosition(position){
-        $('#locationhere').html(`Latitued: ${position.coords.latitude} <br/>Longitude: ${position.coords.longitude}`);
+        const currentLat = position.coords.latitude;
+        const currentLong = position.coords.longitude;
+        $('#locationhere').html(`Latitued: ${currentLat} <br/>Longitude: ${currentLong}`);
 
         if(localStorage.getItem("latitude")){
-            $("#oldLocation").html(`<h2>Previous Location</h2> Latitued: ${localStorage.getItem("latitude")} <br/>Longitude: ${localStorage.getItem("longitude")}`);
-            
+            const prevLat = localStorage.getItem("latitude");
+            const prevLong = localStorage.getItem("longitude");
+            $("#oldLocation").html(`<h2>Previous Location</h2> Latitued: ${prevLat} <br/>Longitude: ${prevLong}`);
+
+            let distance = calcDistanceBetweenPoints(currentLat, currentLong, prevLat, prevLong);
+
             $("#welcomeMessage").html("Welcome Back to the application.");
+            $("#distance").html(`You have travelled ${distance} meters, since your last visit.`);
         } else{
             $("#welcomeMessage").html("Welcome to the application.");
             localStorage.setItem("latitude", position.coords.latitude);
