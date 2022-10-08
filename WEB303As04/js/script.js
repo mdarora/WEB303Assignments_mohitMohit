@@ -24,10 +24,13 @@ $(function () {
 
             $("#welcomeMessage").html("Welcome Back to the application.");
             $("#distance").html(`You have travelled ${distance} meters, since your last visit.`);
+
+            localStorage.setItem("latitude", currentLat);
+            localStorage.setItem("longitude", currentLong);
         } else{
             $("#welcomeMessage").html("Welcome to the application.");
-            localStorage.setItem("latitude", position.coords.latitude);
-            localStorage.setItem("longitude", position.coords.longitude);
+            localStorage.setItem("latitude", currentLat);
+            localStorage.setItem("longitude", currentLong);
         }
     }
     function error(error){
