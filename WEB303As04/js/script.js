@@ -11,7 +11,17 @@ $(function () {
     }
 
     function ShowPosition(position){
-        $('#locationhere').html(`Lattitued ${position.coords.latitude} <br>Longitude: ${position.coords.longitude}`);
+        $('#locationhere').html(`Latitued: ${position.coords.latitude} <br/>Longitude: ${position.coords.longitude}`);
+
+        if(localStorage.getItem("latitude")){
+            $("#oldLocation").html(`<h2>Previous Location</h2> Latitued: ${localStorage.getItem("latitude")} <br/>Longitude: ${localStorage.getItem("longitude")}`);
+            
+            $("#welcomeMessage").html("Welcome Back to the application.");
+        } else{
+            $("#welcomeMessage").html("Welcome to the application.");
+            localStorage.setItem("latitude", position.coords.latitude);
+            localStorage.setItem("longitude", position.coords.longitude);
+        }
     }
     function error(error){
         if(error.code == 1){
@@ -20,6 +30,8 @@ $(function () {
             $('#locationhere').html("Something is wrong! ", error.message);
         }
     }
+
+    
 
 
     // DO NOT EDIT ANY CODE IN THIS FUNCTION DEFINTION
