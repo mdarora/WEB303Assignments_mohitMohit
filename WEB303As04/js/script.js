@@ -25,9 +25,10 @@ $(function () {
             $("#oldLocation").html(`<h2>Previous Location</h2> Latitued: ${prevLat} <br/>Longitude: ${prevLong} <br/> Accuracy: ${prevAccuracy}`);
 
             const distance = calcDistanceBetweenPoints(currentLat, currentLong, prevLat, prevLong);
+            const distanceInKM = distance / 1000;
 
             $("#welcomeMessage").html("Welcome Back to the application.");
-            $("#distance").html(`You have travelled ${distance} meters, since your last visit.`);
+            $("#distance").html(`You have travelled ${distanceInKM.toFixed(3)} Km, since your last visit.`);
 
             localStorage.setItem("latitude", currentLat);
             localStorage.setItem("longitude", currentLong);
