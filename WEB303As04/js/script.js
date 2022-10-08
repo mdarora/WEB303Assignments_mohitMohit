@@ -13,24 +13,30 @@ $(function () {
     function ShowPosition(position){
         const currentLat = position.coords.latitude;
         const currentLong = position.coords.longitude;
-        $('#locationhere').html(`Latitued: ${currentLat} <br/>Longitude: ${currentLong}`);
+        const currentAccuracy = position.coords.accuracy;
+
+        $('#locationhere').html(`Latitued: ${currentLat} <br/>Longitude: ${currentLong} <br/> Accuracy: ${currentAccuracy}`);
 
         if(localStorage.getItem("latitude")){
             const prevLat = localStorage.getItem("latitude");
             const prevLong = localStorage.getItem("longitude");
-            $("#oldLocation").html(`<h2>Previous Location</h2> Latitued: ${prevLat} <br/>Longitude: ${prevLong}`);
+            const prevAccuracy = localStorage.getItem("accuracy");
 
-            let distance = calcDistanceBetweenPoints(currentLat, currentLong, prevLat, prevLong);
+            $("#oldLocation").html(`<h2>Previous Location</h2> Latitued: ${prevLat} <br/>Longitude: ${prevLong} <br/> Accuracy: ${prevAccuracy}`);
+
+            const distance = calcDistanceBetweenPoints(currentLat, currentLong, prevLat, prevLong);
 
             $("#welcomeMessage").html("Welcome Back to the application.");
             $("#distance").html(`You have travelled ${distance} meters, since your last visit.`);
 
             localStorage.setItem("latitude", currentLat);
             localStorage.setItem("longitude", currentLong);
+            localStorage.setItem("accuracy", currentAccuracy);
         } else{
             $("#welcomeMessage").html("Welcome to the application.");
             localStorage.setItem("latitude", currentLat);
             localStorage.setItem("longitude", currentLong);
+            localStorage.setItem("accuracy", currentAccuracy);
         }
     }
     function error(error){
