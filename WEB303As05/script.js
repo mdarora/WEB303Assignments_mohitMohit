@@ -11,7 +11,19 @@ $(document).ready(function () {
             this.description = description;
             this.category = category;
         }
+
+        updateContentItem(id, name, description, category){
+            if (this.id !== id && !name && !description && !category){
+                return;
+            } else {
+                this.name = name;
+                this.description = description;
+                this.category = category;
+            }
+        }
+
     }
+
 
 });
 
