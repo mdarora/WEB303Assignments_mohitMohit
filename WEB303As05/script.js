@@ -54,7 +54,9 @@ $(document).ready(function () {
 
     const bikes = [bike1, bike2, bike3, bike4, bike5];
 
-
+    bikes.forEach(bike => {
+        $('div#content-item-list').append(bike.toString());
+    });
 });
 
 
