@@ -57,6 +57,13 @@ $(document).ready(function () {
     bikes.forEach(bike => {
         $('div#content-item-list').append(bike.toString());
     });
+
+    $('.content-item-wrapper').css({
+        'border' : '1px solid black',
+        'width' : '90%',
+        'padding' : '5px 10px',
+        'margin' : '5px auto'
+    })
 });
 
 
