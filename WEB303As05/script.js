@@ -23,7 +23,7 @@ $(document).ready(function () {
         }
 
         toString(){
-            const nameEl = document.createElement('h2');
+            const nameEl = document.createElement('h4');
             nameEl.textContent = this.name;
             
             const descEl = document.createElement('p');
