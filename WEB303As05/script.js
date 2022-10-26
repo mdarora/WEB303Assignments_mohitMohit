@@ -22,6 +22,24 @@ $(document).ready(function () {
             }
         }
 
+        toString(){
+            const nameEl = document.createElement('h2');
+            nameEl.textContent = this.name;
+            
+            const descEl = document.createElement('p');
+            descEl.textContent = this.description;
+            
+            const catEl = document.createElement('div');
+            catEl.textContent = this.category;
+
+            const wrapperEl = document.createElement('div');
+            wrapperEl.classList.add('content-item-wrapper');
+            wrapperEl.id = `content-item-${this.id}`;
+            wrapperEl.append(nameEl, descEl, catEl);  
+            
+            return wrapperEl;
+        }
+
     }
 
 
