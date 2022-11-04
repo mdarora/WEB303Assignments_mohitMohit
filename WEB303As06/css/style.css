@@ -25,3 +25,68 @@ header nav h1{
     line-height: 80%;
     font-family: 'Kolker Brush', cursive;
 }
+
+/* ********************************************************* */
+main{
+    width: 1200px;
+    margin: 50px auto;
+}
+
+/* ************************** */
+
+.movies h3{
+    text-align: center;
+    font-family: var(--head-font);
+}
+.accordion{
+    list-style: none;
+}
+.accordion .accordion-control{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 8px 20px;
+    color: #0092cc;
+    font-family: var(--head-font);
+    border: 1px solid #fff;
+    background: none;
+    transition: all .5s;
+    text-align: left;
+}
+.accordion .accordion-control.active{
+    border-bottom: none;
+}
+.accordion .accordion-control:hover{
+    box-shadow: 0px 0px 10px #5cc4ec;
+}
+.accordion .accordion-control.active:hover{
+    box-shadow: none;
+}
+.accordion-panel {
+    display: none;
+    padding: 10px 15px;
+    font-size: 1.08em;
+    font-family: var(--text-font);
+    background-color: #444444;
+    border: 1px solid #fff;
+    border-top: none;
+}
+.accordion-panel .movie-info{
+    display: flex;
+    justify-content: space-between;
+}
+.accordion-panel .movie-info figure{
+    flex: 2;
+    text-align: center;
+}
+.accordion-panel .movie-info figure img{
+    max-width: 220px;
+}
+.accordion-panel .movie-info p{
+    flex: 5;
+    line-height: 1.5em;
+    padding: 10px 15px;
+}
