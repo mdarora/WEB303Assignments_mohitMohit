@@ -20,10 +20,11 @@ section{
 /* ********************************************************* */
 header nav{
     padding: 5px 15px;
+    text-align: center;
     border-bottom:1px solid #0092cc;
 }
 header nav h1{
-    font-size: 3em;
+    font-size: 5em;
     color: #0092cc;
     line-height: 80%;
     font-family: 'Kolker Brush', cursive;
@@ -141,3 +142,15 @@ section h3{
     
     display: block;
 }
+
+
+
+/* ********************************************************* */
+footer{
+    padding: 15px;
+    text-align: center;
+    font-family: var(--head-font);
+    border-top:1px solid #0092cc;   
+}
+
+
