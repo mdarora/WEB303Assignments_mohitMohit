@@ -1,9 +1,27 @@
-/* html, body{
-    margin: 0;
-    padding: 0;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Kolker+Brush&family=Roboto:wght@400;500;700;900&display=swap');
+:root{
+    --head-font: 'Roboto', sans-serif;
+    --text-font: 'Josefin Sans', sans-serif
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    color: #fff;
+    min-height: 100vh;
+    background-color: #202020;
+}
+
+/* ********************************************************* */
+header nav{
+    padding: 5px 15px;
+    border-bottom:1px solid #0092cc;
+}
+header nav h1{
+    font-size: 3em;
+    color: #0092cc;
+    line-height: 80%;
+    font-family: 'Kolker Brush', cursive;
 }
