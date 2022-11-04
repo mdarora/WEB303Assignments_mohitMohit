@@ -14,6 +14,9 @@ body{
     background-color: #202020;
 }
 
+section{
+    margin: 50px 0px;
+}
 /* ********************************************************* */
 header nav{
     padding: 5px 15px;
@@ -34,8 +37,9 @@ main{
 
 /* ************************** */
 
-.movies h3{
+section h3{
     text-align: center;
+    margin-bottom: 1em;
     font-family: var(--head-font);
 }
 .accordion{
@@ -89,4 +93,51 @@ main{
     flex: 5;
     line-height: 1.5em;
     padding: 10px 15px;
+}
+
+/* *********************************** */
+
+.about-awards{
+    display: flex;
+    justify-content: space-between;
+}
+.about, .awards{
+    flex: 50%;
+    padding: 0px 10px;
+}
+
+.about .tab-list, .awards .tab-list-aw{
+    list-style: none;
+    display: flex;
+    /* border: 1px solid #0092cc; */
+    justify-content: space-between;
+}
+.about .tab-list li, .awards .tab-list-aw li{
+    flex: 1;
+    text-align: center;
+    border: 1px solid #0092cc;
+}
+.about .tab-list li.active, .awards .tab-list-aw li.active{
+    border-bottom: none;
+    background-color: #444444;
+}
+.about .tab-list li a, .awards .tab-list-aw li a{
+    color: #fff;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-family: var(--head-font);
+}
+.tab-panel, .tab-panel-aw{
+    display: none;
+    padding: 10px 15px;
+    border: 1px solid #0092cc;
+    border-top: none;
+    background-color: #444444;
+    font-family: var(--text-font);
+    line-height: 1.5em;
+}
+.tab-panel.active, .tab-panel-aw.active {
+    
+    display: block;
 }
