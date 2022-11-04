@@ -154,3 +154,34 @@ footer{
 }
 
 
+@media screen and (max-width: 1250px){
+    main{
+        width: 800px;
+    }
+}
+@media screen and (max-width: 850px){
+    main{
+        width: 600px;
+    }
+    .about-awards{
+        display: block;
+    }
+    .about, .awards{
+        margin: 30px 0;
+    }
+}
+@media screen and (max-width: 650px){
+    main{
+        width: 100%;
+        padding: 0px 15px;
+    }
+    .about-awards{
+        display: block;
+    }
+    .about, .awards{
+        margin: 30px 0;
+    }
+    .accordion-panel .movie-info{
+        display: block;
+    }
+}
