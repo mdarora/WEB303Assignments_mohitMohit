@@ -7,11 +7,11 @@ $(function () {
             width: '100%',
             height: 'auto'
         });
+        
 
         if (!$content[0]){
             return;
         }
-        
         var modal = (function(){
             var $window = $(window);
             var $modal = $('<div class="modal"></div>');
