@@ -1,5 +1,5 @@
-#photo-viewer {
-  /* display: none; */
+#photo-viewer{
+  margin: 15px;
 }
 #photo-viewer .photo-box {
   position: relative;
@@ -11,7 +11,7 @@
   content: "Loading...";
   position: absolute;
   z-index: 10;
-  color: #000;
+  color: #fff;
   top: calc(50% - 20px);
   left: calc(50% - 50px);
 }
@@ -21,10 +21,17 @@
   max-height: 100%;
   top: 50%;
   left: 50%;
+  border: 5px solid skyblue;
+  border-radius: 5px;
+}
+#photo-viewer .photo-thumbnails{
+  margin: 20px auto;
 }
 #photo-viewer .thumbnail-anchor img {
   width: 80px;
   height: 45px;
 }
-#photo-viewer .thumbnail-anchor img.active {
+#photo-viewer .thumbnail-anchor.active img {
+  border: 2px solid skyblue;
+  border-radius: 2px;
 }
