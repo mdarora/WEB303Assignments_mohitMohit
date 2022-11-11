@@ -40,6 +40,7 @@ $.fn.customPhotoViewer = function(){
                 }
             });
             $frame.addClass('is-loading');
+            $frame.attr('href', src);
             $img.attr({ 
                 'src': src,
                 'alt':this.title || ''
@@ -47,7 +48,7 @@ $.fn.customPhotoViewer = function(){
        }
     
     });
-     $('.thumb').eq(0).click();
+
     function crossfade($img){
         if($current){
           $current.stop().fadeOut('slow');
