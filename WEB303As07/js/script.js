@@ -44,8 +44,8 @@ $(function () {
                     $modal.css({
                         width: settings.width || 'auto',
                         height: settings.height || 'auto',
-                        color:'blue',
-                        background:'red'
+                        color:'#fff',
+                        background:'skyblue'
                     }).appendTo('body');
         
                     modal.center();
@@ -63,7 +63,7 @@ $(function () {
         modal.open({
             content: $content,
             width: '800px',
-            height:'450px'
+            height:'85%'
         })
 
     });
