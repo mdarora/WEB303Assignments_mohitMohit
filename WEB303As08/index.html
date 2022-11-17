@@ -5,7 +5,33 @@
 </head>
 
 <body>
-    <h1><!-- your name and the show/movie/book name goes here --></h1>
+    
+    <main>
+        <h1>Mohit, Show: Naruto</h1>
+        <div class="search-area">
+            <input type="text" id="search" placeholder="Search">
+        </div>
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Jutsu Type</th>
+                    <th>Chakra Style</th>
+                    <th>Best Attack</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+
+        <div class="buttons" id="filterButtons">
+            <button type="button" class="btn" id="sortAM"></button>
+            <button type="button" class="btn" id="sortNZ"></button>
+        </div>
+
+    </main>
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
