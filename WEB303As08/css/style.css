@@ -35,6 +35,9 @@ main table{
 main table tr:hover{
     background-color: White;
 }
+main table tr.searchMatched:hover{
+    background-color: rgb(17, 138, 17);
+}
 main table th{
     padding: 10px 0;
 }
