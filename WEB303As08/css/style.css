@@ -46,3 +46,15 @@ main table td{
     cursor: pointer;
     border: 1px solid black;
 }
+
+
+@media screen and (max-width: 1250px){
+    main{
+        width: 800px;
+    }
+}
+@media screen and (max-width: 850px){
+    main{
+        width: 550px;
+    }
+}
