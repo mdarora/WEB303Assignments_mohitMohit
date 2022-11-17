@@ -80,5 +80,7 @@ $("button").on("click", function() {
         addDataToTableBody(aToM)
     } else if(id == "sortNZ") {
         addDataToTableBody(nToZ)
+    } else if(id == "all"){
+        addDataToTableBody(characters);
     }
 });
